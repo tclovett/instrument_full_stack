@@ -1,0 +1,23 @@
+{
+  "dependencies": {
+    "audit": "^0.0.6",
+    "body-parser": "^1.20.2",
+    "express": "^4.18.2",
+    "fs": "^0.0.1-security",
+    "nodemon": "^2.0.21",
+    "path": "^0.12.7",
+    "pg": "^8.9.0",
+    "postgres": "^3.3.3",
+    "psql": "^0.0.1"
+  },
+  "name": "instrument_full_stack",
+  "description": "",
+  "version": "1.0.0",
+  "main": "instrument.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon instrument.js"
+  },
+  "author": "",
+  "license": "ISC"
+}
