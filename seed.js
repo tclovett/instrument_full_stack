@@ -30,7 +30,7 @@ const userQuery = `
 INSERT INTO users (first_name, last_name, age, user_key) VALUES ('John', 'Doe', 21, 1)('John', 'Doe', 21, 2);
 `;
 const instrumentQuery = `
-INSERT INTO instruments (type, make, model, user_key) VALUES (tuba', 'miraphone', '2189', 1)('tuba', 'miraphone', '2189', 2);
+INSERT INTO instruments (type, make, model, user_key) VALUES ('tuba', 'miraphone', '2189', 1)('tuba', 'miraphone', '2189', 2);
 `;
 
 pool.query(userQuery);

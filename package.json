@@ -16,7 +16,7 @@
   "main": "instrument.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node instrument.js",
+    "start": "node instrument.js && seed.js",
     "dev": "nodemon instrument.js",
     "seed": "seed.js"
   },
