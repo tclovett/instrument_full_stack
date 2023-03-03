@@ -6,7 +6,7 @@ const pool = new Pool({
     password: process.env.POSTGRES_PASSWORD || 'password',
     port: 5432
 })
-client.connect();
+pool.connect();
 const create_users = `
 CREATE TABLE users (
   first_name VARCHAR(255) NOT NULL,
@@ -23,8 +23,8 @@ CREATE TABLE instruments (
   user_key INT
 );
 `;
-client.query(create_users);
-client.query(create_instruments);
+pool.query(create_users);
+pool.query(create_instruments);
 
 const userQuery = `
 INSERT INTO users (first_name, last_name, age, user_key) VALUES ('John', 'Doe', 21, 1)('John', 'Doe', 21, 2);
@@ -33,6 +33,6 @@ const instrumentQuery = `
 INSERT INTO instruments (type, make, model, user_key) VALUES (tuba', 'miraphone', '2189', 1)('tuba', 'miraphone', '2189', 2);
 `;
 
-client.query(userQuery);
-client.query(instrumentQuery);
-client.end();
+pool.query(userQuery);
+pool.query(instrumentQuery);
+pool.end();
