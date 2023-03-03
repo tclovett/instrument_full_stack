@@ -17,7 +17,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node instrument.js",
-    "dev": "nodemon instrument.js"
+    "dev": "nodemon instrument.js",
+    "seed": "seed.js"
   },
   "author": "",
   "license": "ISC"

@@ -6,10 +6,10 @@ const { Pool } = require('pg');
 app.use(express.json());
 
 const pool = new Pool({
-    user: 'postgres',
-    host: 'localhost',
-    database: 'instrument',
-    password: 'password',
+    user: process.env.POSTGRES_USER || 'postgres',
+    host: process.env.POSTGRES_HOST || 'localhost',
+    database: process.env.POSTGRES_DB || 'instrument',
+    password: process.env.POSTGRES_PASSWORD || 'password',
     port: 5432
 })
 app.use(express.static('public'));
