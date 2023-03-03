@@ -6,7 +6,7 @@ const pool = new Pool({
     password: process.env.POSTGRES_PASSWORD || 'password',
     port: 5432
 })
-
+client.connect();
 const create_users = `
 CREATE TABLE users (
   first_name VARCHAR(255) NOT NULL,
