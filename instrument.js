@@ -12,6 +12,7 @@ const pool = new Pool({
     password: 'password',
     port: 5432
 })
+app.use(express.static('public'));
 app.get("/api/users", (req, res) => {
     pool.query('SELECT * from users', (err, result) => {
         if (err) {
